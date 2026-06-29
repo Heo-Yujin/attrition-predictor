@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>이직 예측</title>
+</head>
+
+<body>
+
+<h2>이직 예측</h2>
+
+<form action="/predict" method="POST">
+
+나이
+<input type="number" name="age">
+
+<br><br>
+
+성별
+
+<select name="gender">
+
+<option>Male</option>
+
+<option>Female</option>
+
+</select>
+
+<br><br>
+
+야근 여부
+
+<select name="overtime">
+
+<option>Yes</option>
+
+<option>No</option>
+
+</select>
+
+<br><br>
+
+월급
+
+<input type="number" name="income">
+
+<br><br>
+
+<input type="submit" value="예측">
+
+</form>
+
+{% if result %}
+
+<h3>{{ result }}</h3>
+
+{% endif %}
+
+</body>
+</html>
